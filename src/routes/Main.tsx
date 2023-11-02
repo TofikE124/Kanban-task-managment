@@ -21,7 +21,7 @@ const Main = () => {
     const handleBoardsChange = () => {
       const boards = getBoards();
       setBoards(boards);
-      setColumns(boards[activeIndex].columns);
+      if (boards.length) setColumns(boards[activeIndex].columns);
     };
     handleBoardsChange();
     window.addEventListener("boards", handleBoardsChange);
