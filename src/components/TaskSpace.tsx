@@ -37,7 +37,6 @@ const TaskSpace = ({ index, isDragging, columnName, fill = false }: Props) => {
 
     const title = e.dataTransfer.getData("title");
     const targetTaskData = findTask(activeIndex, title)!;
-    const prevIndex = parseInt(e.dataTransfer.getData("index"));
     const prevColumnName = e.dataTransfer.getData("columnName");
     if (target.classList.contains("task-space")) {
       const newIndex = parseInt(target.getAttribute("data-index") || "0");
@@ -45,7 +44,6 @@ const TaskSpace = ({ index, isDragging, columnName, fill = false }: Props) => {
         activeIndex,
         { ...targetTaskData, status: columnName },
         prevColumnName,
-        prevIndex,
         columnName,
         newIndex
       );

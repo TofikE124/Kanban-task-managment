@@ -7,7 +7,6 @@ const reOrderTask = (
   activeIndex: number,
   taskData: Task,
   prevColumnName: string,
-  prevIndex: number,
   newColumnName: string,
   newIndex: number
 ) => {

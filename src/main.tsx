@@ -6,7 +6,6 @@ import SidebarProvider from "./providers/SidebarProvider.tsx";
 import { RouterProvider } from "react-router-dom";
 import Router from "./routes/Router.tsx";
 import BoardProvider from "./providers/BoardProvider.tsx";
-import data from "./data/data.ts";
 // console.log(
 //   data.map((b) => ({
 //     ...b,

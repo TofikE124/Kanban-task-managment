@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import ColumnData from "../services/entities/ColumnData";
 import Subtask from "../services/entities/Subtask";
 import ViewTaskForm from "./forms/ViewTaskForm";
 import TaskForm from "./forms/TaskForm";
 import Button from "./Button";
-import { BoardContext } from "../providers/BoardProvider";
 
 import Task from "./Task";
 import TaskSpace from "./TaskSpace";
