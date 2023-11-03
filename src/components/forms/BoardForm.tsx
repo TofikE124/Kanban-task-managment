@@ -79,7 +79,7 @@ const BoardForm = ({ boardName = "", closeSelf = () => {} }: Props) => {
     setColumns((prevColumns) => [
       {
         index: z,
-        value: { name: "", tasks: [] },
+        value: { name: "", tasks: [], color: "" },
         deleteSelf: () => {
           deleteColumn(z);
         },
