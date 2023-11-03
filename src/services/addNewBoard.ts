@@ -1,3 +1,4 @@
+import getRandomColor from "./colors";
 import ColumnData from "./entities/ColumnData";
 import getBoards from "./getBoards";
 
@@ -18,6 +19,7 @@ const addNewBoard = ({ boardName, columns }: Board) => {
   const boardColumns: ColumnData[] = columns.map((c) => ({
     name: c.value.name,
     tasks: c.value.tasks,
+    color: getRandomColor(),
   }));
   console.log(columns);
   boards.unshift({ name: boardName, columns: boardColumns });

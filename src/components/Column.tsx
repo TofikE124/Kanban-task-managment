@@ -27,7 +27,10 @@ const Column = ({ columnData }: Props) => {
     <>
       <div className="column-single">
         <div className="column-title-container flex">
-          <span className="column-color"></span>
+          <span
+            className="column-color"
+            style={{ background: columnData.color }}
+          ></span>
           <p className="column-title txt-medium-grey h-sm uppercase letter-spacing-2">
             {`${columnData.name} (${columnData.tasks.length})`}
           </p>

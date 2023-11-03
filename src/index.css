@@ -210,6 +210,7 @@ label {
 
 .btn:disabled {
   opacity: 0.25;
+  cursor: not-allowed;
 }
 
 .btn-lg {
@@ -512,9 +513,22 @@ textarea {
   max-width: 600px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 6px;
   --flow-space: 1.5rem;
+  animation: showForm 250ms;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes showForm {
+  0% {
+    transform: translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }
 
 .form-title {
@@ -773,6 +787,7 @@ textarea {
 .logo {
   margin-bottom: 3.5rem;
   height: fit-content;
+  user-select: none;
 }
 
 .sidebar-options {
@@ -919,7 +934,6 @@ textarea {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: aqua;
 }
 
 .column-task {
